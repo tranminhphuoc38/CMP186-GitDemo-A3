@@ -20,7 +20,7 @@ namespace Practice_02
                 factor = 1;
             } else if (employeeType == EmployeeType.SeniorEngineer || employeeType == EmployeeType.Manager)
             {
-                factor = 1.5m;
+                factor = 2m;
             } else if (employeeType == EmployeeType.SeniorManager)
             {
                 factor = 3;
