@@ -15,17 +15,22 @@ namespace Practice_02
 
             decimal factor = 0;
 
-            if (employeeType == EmployeeType.Engineer)
+            switch (employeeType)
             {
-                factor = 1;
-            } else if (employeeType == EmployeeType.SeniorEngineer || employeeType == EmployeeType.Manager)
-            {
-                factor = 1.5m;
-            } else if (employeeType == EmployeeType.SeniorManager)
-            {
-                factor = 3;
+                case EmployeeType.Engineer:
+                    factor = 1;
+                    break;
+                case EmployeeType.SeniorEngineer:
+                case EmployeeType.Manager:
+                    factor = 1.5m;
+                    break;
+                case EmployeeType.SeniorManager:
+                case EmployeeType.Expert:
+                    factor = 3;
+                    break;
+                default:
+                    break;
             }
-            // TODO: if employee is Expert, set factor = 3
 
             var salary = BASIC_SALARY * years * factor;
 
