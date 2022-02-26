@@ -22,7 +22,7 @@ namespace Practice_02
                     break;
                 case EmployeeType.SeniorEngineer:
                 case EmployeeType.Manager:
-                    factor = 1.5m;
+                    factor = 2m;
                     break;
                 case EmployeeType.SeniorManager:
                 case EmployeeType.Expert:
